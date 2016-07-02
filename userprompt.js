@@ -1,19 +1,3 @@
-// Create a basic command line Node application using the inquirer package.
-// Your application should ask the user any five questions of your choosing. 
-// The question set should include at least one:
-
-//  	- Basic input, 
-//		- Password, 
-//		- List, 
-//		- Checkbox, 
-//		- and Confirm
-
-// Then if a user's password matches a pre-defined password, re-display the data back to the user with some text. 
-// See the inquirer GitHub documentation "examples" page if you need help.
-
-// Remember to be creative!
-
-// ========================================================================
 var inquirer = require('inquirer');
 
 inquirer.prompt([
@@ -34,7 +18,7 @@ inquirer.prompt([
   {
     type: 'list',
     message: 'Who do you prefer?',
-    choices: ['Bernie Sanders', 'Donald Trump', 'Gary Johnson'],
+    choices: ['Bernie Sanders', 'Donald Trump', 'Gary Johnson', 'Vermin Supreme'],
     name: 'candidates',
   },
 
@@ -54,6 +38,6 @@ inquirer.prompt([
 
 ]).then(function (answers) {
 
-  console.log(JSON.stringify(user, null, 2));
+  console.log(JSON.stringify(answers, null, 2));
 
 });
